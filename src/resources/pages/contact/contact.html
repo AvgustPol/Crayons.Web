@@ -1,0 +1,42 @@
+<template>
+  <require from="styles/contact.css"></require>
+  <require from="resources/elements/simple-footer"></require>
+  <require from="resources/elements/banner.html"></require>
+
+  <banner name="contact" title="Kontakt"></banner>
+
+  <div class="container">
+    <h2 class="contact-heading">Napisz do nas, a na pewno odpiszemy!</h2>
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ullamcorper lacus lacus, at cursus nisl ultrices nec. Maecenas ut interdum sapien, eu consequat tortor. Vivamus tempor neque non efficitur pulvinar. Praesent nec libero a velit finibus varius vitae eget est. </p>
+
+    <hr>
+    <div class="clearfix"></div>
+
+    <form class="form-horizontal" submit.trigger="sendMail()">
+      <div class="col-md-5 col-xs-12">
+        <div class="form-group">
+          <input type="text" class="form-control" value.bind="firstName" placeholder="Imię">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" value.bind="lastName" placeholder="Nazwisko">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" value.bind="email" placeholder="E-mail">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" value.bind="title" placeholder="Tytuł">
+        </div>
+      </div>
+      <div class="col-md-6 col-md-push-1 col-xs-12">
+        <div class="form-group">
+          <textarea rows="10" cols="10" class="form-control" id="content" value.bind="content" placeholder="Treść"></textarea>
+        </div>
+      </div>
+      <div class="col-xs-12 no-padding">
+      <button class="btn btn-success btn-lg btn-send pull-right" type="submit"><i class="fa fa-send"></i> Wyślij</button>
+      </div>
+    </form>
+  </div>
+
+  <simple-footer></simple-footer>
+</template>

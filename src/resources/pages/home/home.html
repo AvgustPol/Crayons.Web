@@ -1,0 +1,112 @@
+<template>
+  <require from="styles/home.css"></require>
+  <require from="./intro-header.html"></require>
+  <require from="resources/elements/simple-footer"></require>
+
+  <intro-header facebook-url.bind="facebookUrl"></intro-header>
+
+  <!-- Page Content -->
+
+  <a name="o-nas"></a>
+  <div class="content-section-a">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-sm-6">
+          <hr class="section-heading-spacer">
+          <div class="clearfix"></div>
+          <h2 class="section-heading">Tutaj będzie krótki opis<br>naszego koła</h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ullamcorper lacus lacus, at cursus nisl ultrices nec. Maecenas ut interdum sapien, eu consequat tortor. Vivamus tempor neque non efficitur pulvinar. Praesent nec libero a velit finibus varius vitae eget est. </p>
+        </div>
+        <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+          <img class="img-responsive" src="assets/images/crayons-logo.png" alt="">
+        </div>
+      </div>
+
+    </div>
+    <!-- /.container -->
+
+  </div>
+  <!-- /.content-section-a -->
+
+  <a  name="kurs"></a>
+  <div class="content-section-b">
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+          <hr class="section-heading-spacer">
+          <div class="clearfix"></div>
+          <h2 class="section-heading">A tutaj będzie coś<br>o kursie :)</h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ullamcorper lacus lacus, at cursus nisl ultrices nec. Maecenas ut interdum sapien, eu consequat tortor. Vivamus tempor neque non efficitur pulvinar. Praesent nec libero a velit finibus varius vitae eget est. Curabitur a pulvinar erat. Curabitur feugiat euismod velit. Nullam lobortis quis felis a suscipit.</p>
+        </div>
+        <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+          <img class="img-responsive" src="assets/images/studio.png" alt="">
+        </div>
+      </div>
+
+    </div>
+    <!-- /.container -->
+
+  </div>
+  <!-- /.content-section-b -->
+
+  <a  name="blog"></a>
+  <div class="content-section-a">
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-5 col-sm-6">
+          <hr class="section-heading-spacer">
+          <div class="clearfix"></div>
+          <h2 class="section-heading">Tutaj będzie ostatni<br>post z bloga</h2>
+          <p class="lead text-justify">TLorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ullamcorper lacus lacus, at cursus nisl ultrices nec. Maecenas ut interdum sapien, eu consequat tortor. Vivamus tempor neque non efficitur pulvinar. Praesent nec libero a velit finibus varius vitae eget est. Curabitur a pulvinar erat. Curabitur feugiat euismod velit. Nullam lobortis quis felis a suscipit.</p>
+        </div>
+        <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+          <hr class="section-heading-spacer">
+          <div class="clearfix"></div>
+          <h2 class="section-heading">A tutaj przedostatni<br>post</h2>
+          <p class="lead text-justify">TLorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ullamcorper lacus lacus, at cursus nisl ultrices nec. Maecenas ut interdum sapien, eu consequat tortor. Vivamus tempor neque non efficitur pulvinar. Praesent nec libero a velit finibus varius vitae eget est. Curabitur a pulvinar erat. Curabitur feugiat euismod velit. Nullam lobortis quis felis a suscipit.</p>
+        </div>
+      </div>
+
+    </div>
+    <!-- /.container -->
+
+  </div>
+  <!-- /.content-section-a -->
+
+  <a  name="kontakt"></a>
+  <div class="banner">
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-6">
+          <h2>Jesteśmy dostępni na:</h2>
+        </div>
+        <div class="col-lg-6">
+          <ul class="list-inline banner-social-buttons">
+            <li>
+              <a href="#" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+            </li>
+            <li>
+              <a href.bind="facebookUrl" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+            </li>
+            <li>
+              <a href="#" class="btn btn-default btn-lg"><i class="fa fa-envelope fa-fw"></i> <span class="network-name">E-mail</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <!-- /.container -->
+
+  </div>
+  <!-- /.banner -->
+
+  <simple-footer navigation="true"></simple-footer>
+</template>

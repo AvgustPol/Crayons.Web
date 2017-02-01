@@ -1,0 +1,59 @@
+<template>
+  <require from="styles/about.css"></require>
+  <require from="resources/elements/simple-footer"></require>
+  <require from="resources/elements/banner.html"></require>
+  <require from="./member-info.html"></require>
+
+  <banner name="about" title="O nas"></banner>
+
+  <div class="container">
+    <h2 class="about-heading">Trochę historii...</h2>
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ullamcorper lacus lacus, at cursus nisl ultrices nec. Maecenas ut interdum sapien, eu consequat tortor. Vivamus tempor neque non efficitur pulvinar. Praesent nec libero a velit finibus varius vitae eget est. </p>
+
+    <hr>
+    <div class="clearfix"></div>
+
+    <h4>Opiekun koła:</h4>
+    <div class="container">
+      <div class="row stylish-panel-container">
+        <member-info member.bind="tutor"></member-info>
+      </div>
+    </div>
+
+    <h4>Nasz zarząd:</h4>
+    <div class="container">
+      <div class="row stylish-panel-container">
+        <member-info repeat.for="member of management" member.bind="member"></member-info>
+      </div>
+    </div>
+
+    <h4>Nasi członkowie:</h4>
+    <p class="lead">
+      Bartłomiej Bieńczyk<br>
+      Witold Kościukiewicz<br>
+      Anna Radziszewska<br>
+      Dawid Szewczyk<br>
+      Grzegorz Maciejewski<br>
+      Justyna Setlak<br>
+      Karolina Liszka<br>
+      Konrad Świerczyński<br>
+      Michał Kurpiński<br>
+      Szymon Kruk<br>
+      Adrianna Bisikiewicz<br>
+    </p>
+
+    <h4>Członkowie honorowi:</h4>
+    <p class="lead">   
+      Artur Jordan - współzałożyciel, opiekun ds. Kursu C# Programming Course<br>
+      Szymon Stawiński - współzałożyciel<br>
+      Leszek Stasiak - prezes honorowy<br>
+      Maciej Andruszko- sekretarz honorowy<br>
+      Sebastian Kasprzyca - uczestnik honorowy<br>
+      Jacek	Bugaj - uczestnik honorowy<br>
+      Krzysztof Górnicki - uczestnik honorowy<br>
+      Andrzej Andrzejczuk - sympatyk<br>
+    </p>
+  </div>
+
+  <simple-footer></simple-footer>
+</template>

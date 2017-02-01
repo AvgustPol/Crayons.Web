@@ -1,0 +1,13 @@
+.course-banner {
+  padding: 150px 0;
+  color: #f8f8f8;
+  background: url(assets/images/banner-course.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.course-banner h2 {
+  margin: 0;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+  font-size: 3em;
+  margin-left: 100px;
+}

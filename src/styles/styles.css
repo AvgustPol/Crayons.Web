@@ -1,0 +1,115 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 150px;
+  padding-top: 80px;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'KG Ten Thousand Reasons';
+  src: url('assets/fonts/KGTenThousandReasons.woff2') format('woff2'),
+    url('assets/fonts/KGTenThousandReasons.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.navbar {
+  min-height: 80px !important;
+  margin-bottom: 0;
+}
+
+  .navbar-nav > li > a, .navbar-brand {
+    padding-top: 30px !important; 
+    padding-bottom: 0 !important;
+    height: 80px;
+  }
+
+  .navbar-brand {
+    font-family: 'KG Ten Thousand Reasons';
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .navbar-nav {
+    margin-left: 50px;
+  }
+
+  .navbar-toggle {
+    margin-top: 20px;
+  }
+
+  .navbar-logo {
+    float: left;
+    padding: 10px 10px 10px 0;
+    height: 60px;
+  }
+
+  .logo {
+    height: 60px;
+    width: auto;
+  }
+
+  /* navbar collapsing at 991px instead of 768px */
+  @media (max-width: 991px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav > li {
+        float: none;
+    }
+    .navbar-nav > li > a {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        height: 50px;
+
+    }
+    .collapse.in {
+        display:block !important;
+    }
+  }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 50px 0;
+  background-color: #f8f8f8;
+}
+
+p.copyright {
+  margin: 15px 0 0;
+}

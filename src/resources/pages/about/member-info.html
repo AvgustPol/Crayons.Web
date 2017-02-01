@@ -1,0 +1,9 @@
+<template bindable="member">
+  <div class="col-md-4 stylish-panel-tile ${member.position === 'Opiekun' ? 'col-md-push-4' : ''}">
+    <div>
+      <img src.bind="member.photoUrl || './assets/images/members/anonymous.jpg'" alt="Profile photo" class="img-circle img-thumbnail">
+      <h2>${member.name}</h2>
+      <p>${member.position !== 'Opiekun' ? member.position : ''}</p>
+    </div>
+  </div>
+</template>
