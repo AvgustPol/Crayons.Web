@@ -1,49 +1,23 @@
+import {autoinject} from 'aurelia-framework';
+import {MembersService} from '../../services/members-service';
+
 const tutor = {
-  "photoUrl": "./assets/images/members/tbabczynski.png",
-  "name": "dr inż. Tomasz Babczyński",
-  "position": "Opiekun"
+  "photoUrl": "tbabczynski.png",
+  "fullName": "dr inż. Tomasz Babczyński"
 }
 
-const management = [
-  {
-    "name": "Karolina Herlender",
-    "position": "Prezes"
-  },
-  {
-    "photoUrl": "./assets/images/members/tszandala.png",
-    "name": "Tomasz Szandała",
-    "position": "Wiceprezes"
-  },
-  {
-    "name": "Magdalena Kulbaka",
-    "position": "Wiceprezes"
-  },
-  {
-    "photoUrl": "./assets/images/members/rroszkowski.png",
-    "name": "Rafał Roszkowski",
-    "position": "Wiceprezes"
-  },
-  {
-    "photoUrl": "./assets/images/members/dkobierski.png",
-    "name": "Dawid Kobierski",
-    "position": "Sekretarz"
-  },
-  {
-    "name": "Krystian Kolad",
-    "position": "Wicesekretarz"
-  },
-  {
-    "photoUrl": "./assets/images/members/mbortkiewicz.jpg",
-    "name": "Mateusz Bortkiewicz",
-    "position": "Herold"
-  },
-    {
-    "name": "Szymon Kuras",
-    "position": "Wiceherold"
-  }
-]
-
+@autoinject()
 export class About {
-  management = management;
   tutor = tutor;
+  members;
+  baseUrl = './assets/images/members/';
+
+  constructor(private membersService: MembersService) {
+
+  }
+
+  activate() {
+    this.membersService.getAll()
+      .then(data => this.members = data);
+  }
 }

@@ -16,14 +16,16 @@
     <h4>Opiekun koła:</h4>
     <div class="container">
       <div class="row stylish-panel-container">
-        <member-info member.bind="tutor"></member-info>
+        <div class="col-md-12 col-md-offset-4">
+          <member-info member.bind="tutor" base-url.bind="baseUrl"></member-info>
+        </div>
       </div>
     </div>
 
     <h4>Nasz zarząd:</h4>
     <div class="container">
       <div class="row stylish-panel-container">
-        <member-info repeat.for="member of management" member.bind="member"></member-info>
+        <member-info repeat.for="member of members" member.bind="member" base-url.bind="baseUrl"></member-info>
       </div>
     </div>
 
