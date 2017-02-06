@@ -43,7 +43,7 @@ typings
 
 .vscode
 
-scripts/app-bundle.ts
-scripts/app-bundle.ts.map
-scripts/vendor-bundle.ts
+scripts/app-bundle.js
+scripts/app-bundle.js.map
+scripts/vendor-bundle.js
 src/environment.ts
