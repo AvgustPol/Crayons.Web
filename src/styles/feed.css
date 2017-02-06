@@ -26,6 +26,9 @@
 .left-panel .panel-default .panel-body {
   padding: 0; 
   margin: 0;
+  text-align: justify;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .left-panel .panel-default .panel-body .col-md-12 {
@@ -40,8 +43,9 @@
   position:relative;
 }
 
-.left-panel .panel:hover img {
-  opacity:.8;
+.left-panel .panel-default .panel-body .thumbnail > img{
+  border-radius: 5px;
+  margin-top: 4px;
 }
 
 .left-panel .panel-default .panel-body .icerik-bilgi{

@@ -1,6 +1,6 @@
 import {bindable} from 'aurelia-framework';
 
-export class SimpleFooterCustomElement {
+export class CrayonsFooterCustomElement {
   @bindable
   navigation = false;
   currentYear = new Date().getFullYear();

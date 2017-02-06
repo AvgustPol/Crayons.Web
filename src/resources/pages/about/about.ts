@@ -16,8 +16,7 @@ export class About {
 
   }
 
-  activate() {
-    this.membersService.getAll()
-      .then(data => this.members = data);
+  async activate() {
+    this.members = await this.membersService.getAllAsync();
   }
 }
