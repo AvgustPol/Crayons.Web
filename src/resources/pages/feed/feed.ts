@@ -7,7 +7,11 @@ export class Feed {
 
   constructor(private feedService: FeedService) {}
 
-  async activate() {
+  activate() {
+    this.getPost();
+  }
+
+  private async getPost() {
     this.posts = await this.feedService.getAllAsync();
   }
 }

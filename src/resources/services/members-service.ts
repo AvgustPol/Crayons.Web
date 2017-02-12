@@ -8,16 +8,21 @@ export class MembersService {
   constructor(private http: HttpClient) {
     http.configure(config => {
       config.useStandardConfiguration()
-        .withBaseUrl('http://localhost:10326/api/members');
+        .withBaseUrl('http://localhost:5000/api/');
     })
   }
 
   async getAllAsync() {
-    this.isFetching = true;
-    var response = await this.http.fetch('');
-    var members = await response.json();
+    try {
+      this.isFetching = true;
+      let response = await this.http.fetch('members');
+      let members = await response.json();
 
-    this.isFetching = false;
-    return members;
+      this.isFetching = false;
+      return members;
+    } catch(error) {
+      this.isFetching = false;
+      return null;
+    }
   }
 }

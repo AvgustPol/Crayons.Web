@@ -10,13 +10,15 @@ const tutor = {
 export class About {
   tutor = tutor;
   members;
-  baseUrl = './assets/images/members/';
+  pictureBaseUrl = './assets/images/members/';
 
-  constructor(private membersService: MembersService) {
+  constructor(private membersService: MembersService) {}
 
+  activate() {
+    this.getMembers();
   }
 
-  async activate() {
+  private async getMembers() {
     this.members = await this.membersService.getAllAsync();
   }
 }
