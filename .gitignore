@@ -45,5 +45,5 @@ typings
 
 scripts/app-bundle.js
 scripts/app-bundle.js.map
-scripts/vendor-bundle.ts
+scripts/vendor-bundle.js
 src/environment.ts
