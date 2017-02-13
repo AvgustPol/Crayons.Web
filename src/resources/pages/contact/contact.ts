@@ -1,5 +1,6 @@
 import {autoinject} from 'aurelia-framework';
 import {MailService} from '../../services/mail-service';
+import {RecaptchaService} from '../../services/recaptcha-service';
 
 @autoinject()
 export class Contact {
@@ -8,10 +9,11 @@ export class Contact {
   email = '';
   title = '';
   content = '';
+  verified = false;
 
-  constructor(private mailService: MailService) {}
+  constructor(private mailService: MailService, private recaptchaService: RecaptchaService) {}
 
-  sendMail() {
+  async sendMail() {
     let mail = {
       "from": {
         "email": this.email,
@@ -27,13 +29,17 @@ export class Contact {
       "content": this.content
     };
 
-    let response = this.mailService.sendMail(mail);
+    let response = await this.mailService.sendMail(mail);
 
     if (response) {
       this.clearForm();
     } else {
 
     }
+  }
+
+  async recaptchaVerified(response) {
+    this.verified = await this.recaptchaService.verify(response);
   }
 
   private clearForm() {

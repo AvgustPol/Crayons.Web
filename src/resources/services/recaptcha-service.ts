@@ -1,25 +1,24 @@
-import {autoinject} from 'aurelia-framework';
 import {HttpClient, json} from 'aurelia-fetch-client';
+import {autoinject} from 'aurelia-framework';
 
 @autoinject()
-export class MailService {
-  isFetching: boolean;
+export class RecaptchaService {
 
   constructor(private http: HttpClient) {
     http.configure(config => {
       config.useStandardConfiguration()
         .withBaseUrl('http://localhost:5000/api/');
-      });
+    });
   }
-
-  async sendMail(mail): Promise<boolean> {
+  
+  async verify(token): Promise<boolean> {
     try {
-      let response = await this.http.fetch('mails', {
+      let response = await this.http.fetch('recaptcha', {
         method: 'POST',
-        body: json(mail)
+        body: json(token)
       });
-      let result = response.json()
-      return result;
+
+      return response.status === 200 ? true : false;
     } catch (error) {
       return false;
     }
