@@ -1,9 +1,9 @@
 import {autoinject} from 'aurelia-framework';
 import {ValidationRules, ValidationControllerFactory,
         ValidationController, validateTrigger} from 'aurelia-validation';
-import {BootstrapFormRenderer} from '../../utils/boostrap-form-renderer';
-import {MailService} from '../../services/mail-service';
-import {RecaptchaService} from '../../services/recaptcha-service';
+import BootstrapFormRenderer from '../../utils/boostrap-form-renderer';
+import MailService from '../../services/mail-service';
+import RecaptchaService from '../../services/recaptcha-service';
 
 import User from '../../models/user';
 import Mail from '../../models/mail';
@@ -52,6 +52,7 @@ export class Contact {
       return;
     }
 
+    // move to backend
     const mailTo: User = {
       firstName: "Dawid",
       lastName: "Kobierski",
@@ -75,6 +76,6 @@ export class Contact {
 
   private clearForm() {
     this.mail = new Mail();
-    this.mail.to = new User();
+    this.mail.from = new User();
   }
 }

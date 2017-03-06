@@ -1,28 +1,25 @@
-import {HttpClient} from 'aurelia-fetch-client';
 import {autoinject} from 'aurelia-framework';
+import HttpService from './http-service';
 
 @autoinject()
-export class MembersService {
+class MembersService {
   isFetching: boolean;
   
-  constructor(private http: HttpClient) {
-    http.configure(config => {
-      config.useStandardConfiguration()
-        .withBaseUrl('http://localhost:5000/api/');
-    })
-  }
+  constructor(private http: HttpService) {}
 
-  async getAllAsync() {
+  async getAllAsync(): Promise<any> {
     try {
       this.isFetching = true;
-      let response = await this.http.fetch('members');
+      let response = await this.http.get('members');
       let members = await response.json();
 
       this.isFetching = false;
       return members;
     } catch(error) {
       this.isFetching = false;
-      return null;
+      // handle error
     }
   }
 }
+
+export default MembersService;

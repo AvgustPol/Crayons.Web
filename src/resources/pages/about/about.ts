@@ -1,5 +1,5 @@
 import {autoinject} from 'aurelia-framework';
-import {MembersService} from '../../services/members-service';
+import MembersService from '../../services/members-service';
 
 const tutor = {
   "photoUrl": "tbabczynski.png",
