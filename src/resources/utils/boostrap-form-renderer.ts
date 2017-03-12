@@ -4,7 +4,7 @@ import {
   ValidateResult
 } from 'aurelia-validation';
 
-class BootstrapFormRenderer {
+export class BootstrapFormRenderer {
   render(instruction: RenderInstruction) {
     for (let { result, elements } of instruction.unrender) {
       for (let element of elements) {
@@ -62,5 +62,3 @@ class BootstrapFormRenderer {
     }
   }
 }
-
-export default BootstrapFormRenderer;

@@ -1,5 +1,5 @@
 import {autoinject} from 'aurelia-framework';
-import MembersService from '../../services/members-service';
+import {MembersService} from '../../services/members-service';
 
 const tutor = {
   "photoUrl": "tbabczynski.png",
@@ -19,6 +19,6 @@ export class About {
   }
 
   private async getMembers() {
-    this.members = await this.membersService.getAllAsync();
+    this.members = await this.membersService.getAll();
   }
 }

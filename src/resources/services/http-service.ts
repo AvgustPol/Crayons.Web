@@ -2,7 +2,7 @@ import {autoinject} from 'aurelia-framework';
 import {HttpClient, json} from 'aurelia-fetch-client';
 
 @autoinject()
-class HttpService {
+export class HttpService {
   constructor(private http: HttpClient) {
     http.configure(config => {
       config.useStandardConfiguration()
@@ -21,5 +21,3 @@ class HttpService {
     });
   }
 }
-
-export default HttpService;

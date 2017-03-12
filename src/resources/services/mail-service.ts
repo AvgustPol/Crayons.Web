@@ -1,8 +1,8 @@
 import {autoinject} from 'aurelia-framework';
-import HttpService from './http-service';
+import {HttpService} from './http-service';
 
 @autoinject()
-class MailService {
+export class MailService {
   isFetching: boolean;
 
   constructor(private http: HttpService) {}
@@ -21,5 +21,3 @@ class MailService {
     }
   }
 }
-
-export default MailService;

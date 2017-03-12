@@ -1,12 +1,12 @@
 import {autoinject} from 'aurelia-framework';
 import {ValidationRules, ValidationControllerFactory,
         ValidationController, validateTrigger} from 'aurelia-validation';
-import BootstrapFormRenderer from '../../utils/boostrap-form-renderer';
-import MailService from '../../services/mail-service';
-import RecaptchaService from '../../services/recaptcha-service';
+import {BootstrapFormRenderer} from '../../utils/boostrap-form-renderer';
+import {MailService} from '../../services/mail-service';
+import {RecaptchaService} from '../../services/recaptcha-service';
 
-import User from '../../models/user';
-import Mail from '../../models/mail';
+import {User} from '../../models/user';
+import {Mail} from '../../models/mail';
 
 @autoinject()
 export class Contact {
@@ -34,7 +34,6 @@ export class Contact {
 
       ValidationRules
         .ensure((m: User) => m.firstName)
-          .minLength(5)
           .required()
         .ensure((m: User) => m.email)
           .email()

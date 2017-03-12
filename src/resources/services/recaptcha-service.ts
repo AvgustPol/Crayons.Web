@@ -1,8 +1,8 @@
 import {autoinject} from 'aurelia-framework';
-import HttpService from './http-service';
+import {HttpService} from './http-service';
 
 @autoinject()
-class RecaptchaService {
+export class RecaptchaService {
 
   constructor(private http: HttpService) {}
   
@@ -16,5 +16,3 @@ class RecaptchaService {
     }
   }
 }
-
-export default RecaptchaService;

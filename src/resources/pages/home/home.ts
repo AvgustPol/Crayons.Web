@@ -1,4 +1,19 @@
+import {autoinject} from 'aurelia-framework';
+import {FeedService} from '../../services/feed-service';
+
+@autoinject()
 export class Home {
   facebookUrl = 'https://www.facebook.com/KNKredek';
-  currentYear = new Date().getFullYear();
+  posts;
+
+  constructor(private feedService: FeedService) {}
+
+  activate() {
+    this.getPosts();
+  }
+
+  private async getPosts() {
+    let postsCount = 2;
+    this.posts = await this.feedService.getLatest(postsCount);
+  }
 }

@@ -1,5 +1,5 @@
 import {autoinject} from 'aurelia-framework';
-import FeedService from '../../services/feed-service';
+import {FeedService} from '../../services/feed-service';
 
 @autoinject()
 export class Feed {
@@ -8,10 +8,10 @@ export class Feed {
   constructor(private feedService: FeedService) {}
 
   activate() {
-    this.getPost();
+    this.getPosts();
   }
 
-  private async getPost() {
+  private async getPosts() {
     this.posts = await this.feedService.getAll();
   }
 }

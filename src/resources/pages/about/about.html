@@ -26,7 +26,7 @@
     <div class="container">
       <div class="row stylish-panel-container">
         <loading-indicator if.bind="membersService.isFetching"></loading-indicator>
-        <error-indicator if.bind="members === null"></error-indicator>
+        <error-indicator if.bind="membersService.error"></error-indicator>
         <member-info repeat.for="member of members" member.bind="member" base-url.bind="pictureBaseUrl"></member-info>
       </div>
     </div>

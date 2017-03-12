@@ -1,13 +1,14 @@
 import {autoinject} from 'aurelia-framework';
-import HttpService from './http-service';
+import {HttpService} from './http-service';
 
 @autoinject()
-class MembersService {
+export class MembersService {
   isFetching: boolean;
+  error: string;
   
   constructor(private http: HttpService) {}
 
-  async getAllAsync(): Promise<any> {
+  async getAll(): Promise<any> {
     try {
       this.isFetching = true;
       let response = await this.http.get('members');
@@ -17,9 +18,7 @@ class MembersService {
       return members;
     } catch(error) {
       this.isFetching = false;
-      // handle error
+      this.error = 'Failed to load resources';
     }
   }
 }
-
-export default MembersService;

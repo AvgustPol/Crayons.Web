@@ -58,18 +58,25 @@
     <div class="container">
 
       <div class="row">
-        <div class="col-lg-5 col-sm-6">
-          <hr class="section-heading-spacer">
-          <div class="clearfix"></div>
-          <h2 class="section-heading">Tutaj będzie ostatni<br>post z bloga</h2>
-          <p class="lead text-justify">TLorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ullamcorper lacus lacus, at cursus nisl ultrices nec. Maecenas ut interdum sapien, eu consequat tortor. Vivamus tempor neque non efficitur pulvinar. Praesent nec libero a velit finibus varius vitae eget est. Curabitur a pulvinar erat. Curabitur feugiat euismod velit. Nullam lobortis quis felis a suscipit.</p>
+        <h2 class="section-heading">Aktualności z kredkowego świata</h2>
+        <loading-indicator if.bind="feedService.isFetching"></loading-indicator>
+			  <error-indicator if.bind="feedService.error"></error-indicator>
+        <div if.bind="posts">
+          <div class="col-lg-5 col-sm-6">
+            <hr class="section-heading-spacer">
+            <div class="clearfix"></div>
+            <p class="lead text-justify">${posts.posts[0].content}</p>
+          </div>
+          <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+            <hr class="section-heading-spacer">
+            <div class="clearfix"></div>
+            <p class="lead text-justify">${posts.posts[1].content}</p>
+          </div>
         </div>
-        <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-          <hr class="section-heading-spacer">
-          <div class="clearfix"></div>
-          <h2 class="section-heading">A tutaj przedostatni<br>post</h2>
-          <p class="lead text-justify">TLorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ullamcorper lacus lacus, at cursus nisl ultrices nec. Maecenas ut interdum sapien, eu consequat tortor. Vivamus tempor neque non efficitur pulvinar. Praesent nec libero a velit finibus varius vitae eget est. Curabitur a pulvinar erat. Curabitur feugiat euismod velit. Nullam lobortis quis felis a suscipit.</p>
-        </div>
+        <a route-href="route: feed" class="btn btn-default btn-lg pull-right">
+          <i class="fa fa-fw fa-chevron-right"></i>
+          POKAŻ WIĘCEJ
+        </a>
       </div>
 
     </div>
