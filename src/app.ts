@@ -13,7 +13,9 @@ export class App {
       { route: 'about', name: 'about', moduleId: `${pages}/about/about`, title: 'O nas', nav: true },
       { route: 'course', name: 'course', moduleId: `${pages}/course/course`, title: 'Kurs', nav: true },
       { route: 'gallery', name: 'gallery', moduleId: `${pages}/gallery/gallery`, title: 'Galeria', nav: true },
-      { route: 'contact', name: 'contact', moduleId: `${pages}/contact/contact`, title: 'Kontakt', nav: true }
+      { route: 'contact', name: 'contact', moduleId: `${pages}/contact/contact`, title: 'Kontakt', nav: true },
+      { route: 'github-signin', name: 'github-signin', moduleId: `${pages}/github-signin/github-signin`, 
+        title: 'Logowanie przez GitHub' }
     ]);
     this.router = router;
   }
