@@ -25,6 +25,10 @@
   padding: 0;
 }
 
+.btn-send {
+  margin-top: 20px;
+}
+
 @media(max-width: 768px) {
   .btn-send {
     width: 100%;

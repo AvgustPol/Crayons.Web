@@ -1,9 +1,10 @@
 <template>
   <require from="styles/contact.css"></require>
-  <require from="resources/elements/simple-footer"></require>
-  <require from="resources/elements/banner.html"></require>
+  <require from="resources/elements/crayons-footer"></require>
+  <require from="resources/elements/crayons-banner.html"></require>
+  <require from="../../elements/google-recaptcha"></require>
 
-  <banner name="contact" title="Kontakt"></banner>
+  <crayons-banner name="contact" title="Kontakt"></crayons-banner>
 
   <div class="container">
     <h2 class="contact-heading">Napisz do nas, a na pewno odpiszemy!</h2>
@@ -12,31 +13,35 @@
     <hr>
     <div class="clearfix"></div>
 
-    <form class="form-horizontal" submit.trigger="sendMail()">
+    <form class="form-horizontal" submit.delegate="sendMail()">
       <div class="col-md-5 col-xs-12">
         <div class="form-group">
-          <input type="text" class="form-control" value.bind="firstName" placeholder="Imię">
+          <input type="text" class="form-control" value.bind="mail.from.firstName & validate" placeholder="Imię">
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" value.bind="lastName" placeholder="Nazwisko">
+          <input type="text" class="form-control" value.bind="mail.from.lastName & validate" placeholder="Nazwisko">
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" value.bind="email" placeholder="E-mail">
+          <input type="text" class="form-control" value.bind="mail.from.email & validate" placeholder="E-mail">
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" value.bind="title" placeholder="Tytuł">
+          <input type="text" class="form-control" value.bind="mail.subject & validate" placeholder="Tytuł">
         </div>
+
       </div>
       <div class="col-md-6 col-md-push-1 col-xs-12">
         <div class="form-group">
-          <textarea rows="10" cols="10" class="form-control" id="content" value.bind="content" placeholder="Treść"></textarea>
+          <textarea rows="13" cols="10" class="form-control" id="content" value.bind="mail.content & validate" placeholder="Treść"></textarea>
         </div>
       </div>
-      <div class="col-xs-12 no-padding">
-      <button class="btn btn-success btn-lg btn-send pull-right" type="submit"><i class="fa fa-send"></i> Wyślij</button>
+      <div class="col-xs-12 col-sm-6 no-padding">
+          <google-recaptcha verified.call="recaptchaVerified($event)"></google-recaptcha>      
+        </div>
+      <div class="col-xs-12 col-sm-6 no-padding">
+        <button class="btn btn-success btn-lg btn-send pull-right" type="submit" disabled.bind="canSubmit"><i class="fa fa-send"></i> Wyślij</button>
       </div>
     </form>
   </div>
 
-  <simple-footer></simple-footer>
+  <crayons-footer></crayons-footer>
 </template>
