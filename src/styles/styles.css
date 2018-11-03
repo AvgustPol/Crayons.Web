@@ -19,14 +19,6 @@ h6 {
   font-weight: 700;
 }
 
-@font-face {
-  font-family: 'KG Ten Thousand Reasons';
-  src: url('../../static/fonts/KGTenThousandReasons.woff2') format('woff2'),
-    url('../../static/fonts/KGTenThousandReasons.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 .container-fluid {
   padding: 0;
 }
@@ -41,12 +33,6 @@ h6 {
   padding-top: 30px !important;
   padding-bottom: 0 !important;
   height: 80px;
-}
-
-.navbar-brand {
-  font-family: 'KG Ten Thousand Reasons';
-  font-size: 18px;
-  line-height: 20px;
 }
 
 .navbar-nav {
@@ -67,12 +53,12 @@ h6 {
 
 .navbar-logo {
   float: left;
-  padding: 10px 10px 10px 0;
-  height: 60px;
+  padding: 23px 0;
+  height: 36px;
 }
 
 .logo {
-  height: 60px;
+  height: 36px;
   width: auto;
 }
 
