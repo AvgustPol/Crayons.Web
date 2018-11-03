@@ -1,13 +1,13 @@
 .contact-banner {
   padding: 150px 0;
   color: #f8f8f8;
-  background: url(assets/images/banner-contact.jpg) no-repeat center center;
+  background: url('../../static/images/banner-contact.jpg') no-repeat center center;
   background-size: cover;
 }
 
 .contact-banner h2 {
   margin: 0;
-  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
   font-size: 3em;
   margin-left: 100px;
 }
@@ -34,4 +34,3 @@
     width: 100%;
   }
 }
-

@@ -1,13 +1,13 @@
 .feed-banner {
   padding: 150px 0;
   color: #f8f8f8;
-  background: url(assets/images/banner-feed.jpg) no-repeat top center;
+  background: url('../../static/images/banner-feed.jpg') no-repeat top center;
   background-size: cover;
 }
 
 .feed-banner h2 {
   margin: 0;
-  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
   font-size: 3em;
   margin-left: 100px;
 }
@@ -17,14 +17,14 @@
 }
 
 .left-panel .panel-default {
-  border-bottom-left-radius:7px; 
-  border-bottom-right-radius:7px; 
-  border-bottom:2px #DDD solid;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-bottom: 2px #DDD solid;
   margin-top: 30px;
 }
 
 .left-panel .panel-default .panel-body {
-  padding: 0; 
+  padding: 0;
   margin: 0;
   text-align: justify;
   overflow-wrap: break-word;
@@ -32,69 +32,68 @@
 }
 
 .left-panel .panel-default .panel-body .col-md-12 {
-  margin:0; 
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
-.left-panel .panel-default .panel-body .thumbnail{
-  border:none; 
-  margin:0; 
-  padding:0; 
-  position:relative;
+.left-panel .panel-default .panel-body .thumbnail {
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 
-.left-panel .panel-default .panel-body .thumbnail > img{
+.left-panel .panel-default .panel-body .thumbnail>img {
   border-radius: 5px;
   margin-top: 4px;
 }
 
-.left-panel .panel-default .panel-body .icerik-bilgi{
-  margin:30px;
+.left-panel .panel-default .panel-body .icerik-bilgi {
+  margin: 30px;
 }
 
-.icerik-bilgi .btn-primary { 
-  float:right; 
-  margin-bottom:30px;
+.icerik-bilgi .btn-primary {
+  float: right;
+  margin-bottom: 30px;
 }
 
 .icerik-bilgi h2 {
-  margin-bottom:30px; 
-  color:#333;
+  margin-bottom: 30px;
+  color: #333;
 }
 
-.icerik-bilgi h2:hover
-{
-  color:#E74C3C; 
-  text-decoration:none;
+.icerik-bilgi h2:hover {
+  color: #E74C3C;
+  text-decoration: none;
 }
 
 .icerik-bilgi a:hover {
-  text-decoration:none;
+  text-decoration: none;
 }
 
 .icerik-bilgi p {
-  margin-bottom:30px; 
-  line-height:25px; 
-  font-size:16px;
+  margin-bottom: 30px;
+  line-height: 25px;
+  font-size: 16px;
 }
 
-.icerik-bilgi .btn-group { 
-  float:left;
+.icerik-bilgi .btn-group {
+  float: left;
 }
 
 .btn-group a {
-  font-size:26px; 
-  color:#CCC;
+  font-size: 26px;
+  color: #CCC;
 }
 
 .btn-group .btn-facebook:hover {
-  color:#3B5998;
+  color: #3B5998;
 }
 
 .btn-group .btn-twitter:hover {
-  color:#55ACEE;
+  color: #55ACEE;
 }
 
-.btn-group .btn-google:hover { 
-  color:#DD4B39;
+.btn-group .btn-google:hover {
+  color: #DD4B39;
 }
